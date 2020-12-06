@@ -11,7 +11,7 @@ import unicodedata
 
 class ViradaCulturalSpider(CrawlSpider):
     name = "virada_cultural"
-    start_urls = ["http://www.viradaculturalpaulista.sp.gov.br"]
+    start_urls = ["http://web.archive.org/web/20160825145532/http://www.viradaculturalpaulista.sp.gov.br/cidades"]
 
     def parse(self, response):
         body_sel = Selector(response)
@@ -47,5 +47,5 @@ class ViradaCulturalSpider(CrawlSpider):
 
     def print_item(self, atracao):
         for k, v in atracao.items():
-            print "%s: %s" % (k, v)
+            print("%s: %s" % (k, v))
         print("--------------------")
