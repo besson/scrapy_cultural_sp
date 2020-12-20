@@ -60,3 +60,7 @@ target/
 
 #Ipython Notebook
 .ipynb_checkpoints
+
+venv/
+
+scrapy_cultural_sp/venv

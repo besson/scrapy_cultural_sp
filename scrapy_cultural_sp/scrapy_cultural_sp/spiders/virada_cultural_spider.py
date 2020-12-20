@@ -1,6 +1,3 @@
-#!/usr/bin/env python
-# -*- coding: utf-8 -*-
-
 from scrapy.selector import Selector
 from scrapy.http import Request
 from scrapy_cultural_sp.items import Atracao
@@ -37,7 +34,7 @@ class ViradaCulturalSpider(CrawlSpider):
             self.print_item(atracao)
 
     def to_str(self, element):
-        return element.extract()[0].encode("utf-8")
+        return element.extract()[0]
 
     def to_date(self, element):
         dia, mes = self.to_str(element).split("/")
@@ -47,5 +44,5 @@ class ViradaCulturalSpider(CrawlSpider):
 
     def print_item(self, atracao):
         for k, v in atracao.items():
-            print("%s: %s" % (k, v))
+            print(f"{k}: {v}")
         print("--------------------")

@@ -5,13 +5,13 @@ Esse projeto é apresentado na vídeo [aula sobre Scrapy](https://www.youtube.co
 ## Requisitos para a instalação
 Para rodar a versão atual do Scrapy cultural SP, é necessário:
 
-- Python 2.7
-- Scrapy 1.3.3
+- Python 3
+- Scrapy 1.4.0
 
 ## Instalação usando virtualenv
 
 ```
-virtualenv --python=/usr/bin/python2.7 venv
+python -m venv venv
 source venv/bin/activate
 pip install -r requirements.txt
 ```
